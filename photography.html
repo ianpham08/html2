@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VISUAL ARCHIVE</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --border: #1a1a1a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        nav {
+            display: flex; 
+            justify-content: flex-end; 
+            padding: 30px 6%; 
+            position: fixed; 
+            width: 88%; 
+            z-index: 100; 
+            background: rgba(10,10,10,0.75); 
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            padding: 160px 6% 80px 6%;
+        }
+
+        /* The "Justified" Gallery Fix */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .photo-wrap {
+            height: 300px; /* Adjust this to change how many photos per row */
+            flex-grow: 1;
+            background: #111;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* This ensures landscape photos take up more horizontal space */
+        .photo-wrap img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Makes the last row align left instead of stretching weirdly */
+        .gallery::after {
+            content: "";
+            flex-grow: 1000;
+        }
+
+        .photo-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            font-size: 10px; 
+            color: #444; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="display: flex; gap: 40px;">
+            <a href="index.html" style="color: #888;">Home</a>
+            <a href="design.html" style="color: #888;">Design</a>
+            <a href="photography.html" style="color: #fff;">Photography</a>
+            <a href="contact.html" style="color: #888;">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header style="margin-bottom: 60px;">
+            <span style="color: var(--accent); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 5px;">// ARCHIVE</span>
+            <h1 style="font-size: clamp(40px, 6vw, 60px); text-transform: uppercase; font-weight: 900; margin: 10px 0 0 0; letter-spacing: -2px;">Visual Stories</h1>
+        </header>
+
+        <div class="gallery">
+            <div class="photo-wrap"><img src="886A9323.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A9835.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A9256.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A9951.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A2949.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A9860.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A9230.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A0778.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A3118.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A7088-Enhanced-NR-scaled.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A0435.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A1715.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A1505.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A1567.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A2306.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A2474.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A2436.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A2336.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A3194.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A3260.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A3553.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A3908-scaled.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A4205.jpg" alt="Car Detail"></div>
+            <div class="photo-wrap"><img src="886A4489.jpg" alt="Car Detail"></div>
+        </div>
+    </div>
+
+    <footer style="padding: 60px 6%; border-top: 1px solid var(--border); text-align: center;">
+        <p class="footer-text">© 2026 // ALL RIGHTS RESERVED</p>
+    </footer>
+
+</body>
+</html>
